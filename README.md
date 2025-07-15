@@ -1,5 +1,7 @@
 # Memorizer
 
+[![Docker Pulls](https://img.shields.io/docker/pulls/petabridge/memorizer)](https://hub.docker.com/r/petabridge/memorizer)
+
 Memorizer is a .NET-based service that allows AI agents to store, retrieve, and search through memories using vector embeddings. It leverages PostgreSQL with the pgvector extension to provide efficient similarity search capabilities.
 
 Key features:
@@ -7,6 +9,8 @@ Key features:
 - Retrieve memories by ID
 - Semantic search through memories using vector similarity
 - Filter search results using tags
+- Create relationships between memories to form knowledge graphs
+- UI for manually adding, editing, deleting, or viewing memories
 - MCP (Model Context Protocol) integration for easy use with AI agents
 
 ## Technologies
@@ -15,11 +19,14 @@ Key features:
 - PostgreSQL with pgvector extension
 - Model Context Protocol (MCP)
 - ASP.NET Core
+- [Akka.NET](https://getakka.net/) for background jobs, such as re-embedding memories if you change algorithms
 - Npgsql for PostgreSQL connectivity
 
 ---
 
-## 🚀 Local Deployment (Recommended)
+## Installation with Docker
+
+## 🚀 Local Builds
 
 ### Prerequisites
 - Docker and Docker Compose
